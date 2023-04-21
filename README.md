@@ -51,11 +51,13 @@ I belive there is a work around Good luck though :man_shrugging:
 </ul>
 </div>
 
-<p> Leave the default options for network, identity, and tags, or feel free to change them if you know what you are doing :smirk: <p>
+<p> Leave the default options for network, identity, and tags, or feel free to change them if you know what you are doing <p>
 <p> When everything is done jump to (Review + create), it will display all of the configurations you made just simply click on create </p> 
 <p> the generating process will only take a few seconds </p> 
 
-<p> Viola now you have 
+<p> Next search for resource groups in the top of the screen then click on it, the resource group that was created earlier should be visible there, and inside of it will be the speech service. </p>
+
+<p> Two things are required from  </p>
 
 
 
