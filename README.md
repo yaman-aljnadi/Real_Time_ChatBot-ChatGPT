@@ -49,7 +49,7 @@
 </div>
 
 <p> Leave the default options for network, identity, and tags, or feel free to change them if you know what you are doing <p>
-<p> When everything is done jump to (Review + Create), it will display all of the configurations made, if everything is checks click on create </p> 
+<p> When everything is done jump to (Review + Create), it will display all of the configurations made, if everything checks click on create </p> 
 <p> The generating process will only take a few seconds </p> 
 
 <p> Next search for resource groups at the top of the screen then click on it, the resource group that was created earlier should be visible there, and the speech service should be found inside. </p>
