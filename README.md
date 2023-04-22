@@ -83,8 +83,10 @@ spx --% config @region --set SPEECH-REGION
 ```
 spx recognize --microphone
 ``` 
-<p>can't see anythig on the screen, try changing the microhone input through windows settings:  Start > Settings > System > Sound, make sure that the right microphone is in use. </p>
+<p>can't see anythig on the screen, try changing the microhone input through windows settings:  Start > Settings > System > Sound, make sure that the right microphone is in use. And try again</p>
 
+<br>
+<br>
 
 <h3> Moving the OpenAI </h3>
 
