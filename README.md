@@ -57,7 +57,45 @@ I belive there is a work around Good luck though :man_shrugging:
 
 <p> Next search for resource groups in the top of the screen then click on it, the resource group that was created earlier should be visible there, and inside of it will be the speech service. </p>
 
-<p> Two things are required from  </p>
+<p> Two things are required from inside the speech service Key and Region </p>
+
+
+
+![Key_And_Region_updated](https://user-images.githubusercontent.com/60922667/233783910-3cbc1d4e-a85f-4c3a-bc33-42b0f1318f28.jpg)
+
+<p> Now the azure part is done. Next configure the SPX through powershell using the following command: </p>
+
+```
+dotnet tool install --global Microsoft.CognitiveServices.Speech.CLI 
+```
+<p> SPX should be configured, next save your speech key and region that was aquired from speech service by using the following command </p>
+
+```
+spx --% config @key --set SPEECH-KEY
+```
+```
+spx --% config @region --set SPEECH-REGION
+```
+
+
+
+<p>!!!Note:  Microsoft Visual C++ Redistributable for Visual Studio 2019 and .NET 6 are required. Instructions can be found here https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/spx-basics?tabs=windowsinstall%2Cpowershell</p>
+
+<p>Viola now the speech recognition should b working. To try it type </p> 
+
+```
+spx recognize --microphone
+``` 
+<p>can't see anythig on the screen, try changing the microhone input through windows settings:  Start > Settings > System > Sound, make sure that the right microphone is in use. </p>
+
+
+<h3> Moving the OpenAI </h3>
+
+
+![OpenAI](https://user-images.githubusercontent.com/60922667/233785126-79c27190-68d9-4ea7-aefb-2bb9c45c5759.png)
+
+<p>The openai part is really simple we only need to aquire the api key in order to use in our code, create an account on the openai website </p>
+
 
 
 
