@@ -78,7 +78,7 @@ spx --% config @region --set SPEECH-REGION
 
 !!!Note:  **Microsoft Visual C++ Redistributable for Visual Studio 2019** and **.NET 6** are required. Instructions can be found here https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/spx-basics?tabs=windowsinstall%2Cpowershell
 
-<p>Viola now the speech recognition should b working. To try it type </p> 
+<p>Viola now the speech recognition should be working. To try it type </p> 
 
 ```
 spx recognize --microphone
