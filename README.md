@@ -108,7 +108,7 @@ Creating an account in openai should provide you with 18$ for a start, and in my
 pip install -r requirements.txt
 ```
 
-<p>simply open SPX_CHATGPT_TEXT_DIVIN.py with a text editor and change the API keys. </p>
+<p> Everything should be set up and ready to go, don't forget to update the API keys inside the python file. </p>
 
 <h2> Finally run the code and hope that everything works, because if it didn't good luck debugging </h2>
 <h2>!!!Final note, the owner of this repository is currently looking for a job, any help will be amazing :people_hugging:</h2>
