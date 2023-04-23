@@ -111,7 +111,7 @@ pip install -r requirements.txt
 <p> Everything should be set up and ready to go, don't forget to update the API keys inside the python file. </p>
 
 <h2> Finally run the code and hope that everything works, because if it didn't good luck debugging </h2>
-<h2>!!!Final note, the owner of this repository is currently looking for a job, any help will be amazing :people_hugging:</h2>
+<h2>!!!Final note, the owner of this repository is currently looking for a job, any help will be appreciated :people_hugging:</h2>
 
 
 
