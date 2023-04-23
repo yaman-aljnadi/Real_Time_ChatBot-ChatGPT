@@ -1,0 +1,56 @@
+import subprocess
+import openai
+import pyttsx3
+
+import win32api
+import win32gui
+import time
+
+
+openai.api_key = "INSERT TOKEN"
+p = subprocess.Popen('spx recognize --microphone', stdout=subprocess.PIPE)
+
+message_history = []
+engine = pyttsx3.init()
+
+WM_APPCOMMAND = 0x319
+APPCOMMAND_MICROPHONE_VOLUME_MUTE = 0x180000
+
+hwnd_active = win32gui.GetForegroundWindow()
+
+engine.startLoop(False)
+while True:
+    ## SPX Part from Azure you need to configure an Azure cognitive service in order to obtain a key and a region
+    line = p.stdout.readline()
+    line = line.strip().decode()
+
+    print(line)
+    if("RECOGNIZED:" in line):
+        line = line.replace("RECOGNIZED: ", "")
+        # print(line)
+        message_history.append({"role":"user", "content":line})
+
+        response = openai.ChatCompletion.create(
+            model = "gpt-3.5-turbo",
+            messages = message_history
+        )
+        response = response.choices[0].message.content
+
+        print(response)
+        win32api.SendMessage(hwnd_active, WM_APPCOMMAND, None, APPCOMMAND_MICROPHONE_VOLUME_MUTE)
+        time.sleep(0.3)
+        engine.say(response)
+        engine.iterate()
+        time.sleep(0.3)
+        win32api.SendMessage(hwnd_active, WM_APPCOMMAND, None, APPCOMMAND_MICROPHONE_VOLUME_MUTE)
+
+
+        message_history.append({"role":"assistant","content": response})
+        # print(message_history)
+
+
+# import pyttsx3
+
+# engine = pyttsx3.init()
+# engine.say("so I can write anything in here and you will say it for me?")
+# engine.runAndWait()
